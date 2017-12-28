@@ -13,7 +13,7 @@ Than i write some code for Arduino that let me capture and store the signal.
 After some bit-to-temperature/humidity decoding i get the right conversion.
 Finally i get my humidity and temperature sniffed and stored by the Arduino!
 
-##What you can find inside
+## What you can find inside
 Bresser_DECODE       : The code used by Arduino to capture and print out the relevant signal.
 Analisi_sensori_H_T_ : Audacity file where sensor signal is captured
 Raw_bit_pattern.txt  : The bit string patterns printed out by the Arduino, and the respective temperature and humidity.
