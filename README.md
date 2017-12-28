@@ -1,31 +1,63 @@
-## Synopsis
+## Backeng a 433mhz H/T sensor with an Arduino
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+In this project i implement a well know hack!
+Using a common 433 mhz RF Reciver, i decode a signal coming from a wireless sensor and directed to a weather station.
+I just bougth on Amazon a weather station with 3 wireless sensor like this one : 
 
-## Code Example
+https://www.bresser.de/en/Weather-Time/Weather-Stations/BRESSER-Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data.html
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz.
 
-## Motivation
+First i use Audacity to analyze and understand the wireless signal probed out by the sensors.
+Than i write some code for Arduino that let me capture and store the signal.
+After some bit-to-temperature/humidity decoding i get the right conversion.
+Finally i get my humidity and temperature sniffed and stored by the Arduino!
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
 
-## Installation
 
-Provide code examples and explanations of how to get the project.
 
-## API Reference
+## More Info...
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
+https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
 
-Describe and show how to run the tests with code examples.
+I followed this guide step by step, just let me point out something...
 
-## Contributors
+1) To connect my RF reciver to the sound card i use an old headphone, since is tripole,i connected the "single" 
+wire to the DATA PIN of the RF Reciver and the "couple" wire to the ground.
+2) The code that it's in the site, as the code you find in this repository, are HARD CODED; 
+or better, based on the signal that is retrived by the wireless sensor. 
+So if you don'thave the SAME wireless sensor, you have to write your code.
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+## Backeng a 433mhz H/T sensor with an Arduino
 
-## License
+In this project i implement a well know hack!
+Using a common 433 mhz RF Reciver, i decode a signal coming from a wireless sensor and directed to a weather station.
+I just bougth on Amazon a weather station with 3 wirelss sensor like this one : 
 
-A short snippet describing the license (MIT, Apache, etc.)
+https://www.bresser.de/en/Weather-Time/Weather-Stations/BRESSER-Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data.html
+
+Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz.
+
+First i use Audacity to analyze and understand the wireless signal probed out by the sensors.
+Than i write some code for Arduino that let me capture and store the signal.
+After some bit-to-temperature decoding i get the right conversion.
+Finally i get my humidity and temperature sniffed and stored by the Arduino!
+
+
+
+
+## More Info...
+
+https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
+
+I follow this guide step by step, just let me point out something...
+
+1) To connect my RF reciver to the sound card i use an old headphone, since is tripole, connect the "single" 
+wire to the DATA PIN of the RF Reciver and the couple to the ground.
+2) The code that it's in the site, as the code you find in this repository are HARD CODED, 
+or better, based on the signal that is retrived by the wireless sensor. So if you don't
+have the SAME wireless sensor, you have to write your code.
+
+https://fetzerch.github.io/2014/11/15/reveng433/
+
