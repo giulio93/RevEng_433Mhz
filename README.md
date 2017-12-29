@@ -6,7 +6,7 @@ I just bougth on Amazon a weather station with 3 wireless sensor like this one :
 
 https://www.bresser.de/en/Weather-Time/Weather-Stations/BRESSER-Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data.html
 
-Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz.
+Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz, to capture sensors signal.
 
 First i use Audacity to analyze and understand the wireless signal probed out by the sensors.
 Than i write some code for Arduino that let me capture and store the signal.
@@ -16,7 +16,7 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
 ## What you can find inside
 Bresser_DECODE       : The code used by Arduino to capture and print out the relevant signal.
 
-Analisi_sensori_H_T_ : Audacity file where sensor signal is captured
+Analisi_sensori_H_T_ : Audacity files where sensor signal is captured
 
 Raw_bit_pattern.txt  : The bit string patterns printed out by the Arduino, and the respective temperature and humidity.
 
