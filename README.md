@@ -21,10 +21,10 @@ Analisi_sensori_H_T_    : Audacity files where sensor signal is captured
 Raw_bit_pattern.txt     : The bit string patterns printed out by the Arduino, and the respective temperature and humidity.
 
 Bresser_bits_to_decimal : The code used by Arduino to convert the bitstring in decimal,
-                          Converting 01110000 10100000 01110110 11110011 0010SYNC 
-                          in         01110000 1010 <== Channel
-                                     0000 01110110 <== Temperature
-                                         0011 0010 <== Himidity
+                          * Converting 01110000 10100000 01110110 11110011 0010SYNC 
+                          * in         01110000 1010 <== Channel
+                          *           0000 01110110 <== Temperature
+                          *              0011 0010 <== Himidity
                                          
 Serial_to_file.py       : A Python script, that write Arduino serial output into a file.
  ## More Info...
@@ -39,6 +39,8 @@ wire to the DATA PIN of the RF Reciver and the "couple" wire to the ground.
 2) The code that it's in the site, as the code you find in this repository, are HARD CODED; 
 or better, based on the signal that is retrived by the wireless sensor. 
 So if you don'thave the SAME wireless sensor, you have to write your code.
+
+3)Take a look at (https://github.com/giulio93/Regression_Tree_H-T) and see what i was able to do, once the data are collected!
 
 
 
