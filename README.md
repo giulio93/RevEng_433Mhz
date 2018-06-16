@@ -33,10 +33,10 @@ https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensor
 
 I followed this guide step by step, just let me point out something...
 
-1) To connect my RF reciver to the sound card i use an old headphone, since is tripole,i connected the "single" 
+1) To connect my RF reciver to the sound card i use an old pair of headphones, since is tripole,i connected the "single" 
 wire to the DATA PIN of the RF Reciver and the "couple" wire to the ground.
 
-2) The code that it's in the site, as the code you find in this repository, are HARD CODED; 
+2) The code that in the web site, as the in this repository, are HARD CODED; 
 or better, based on the signal that is retrived by the wireless sensor. 
 So if you don'thave the SAME wireless sensor, you have to write your code.
 
