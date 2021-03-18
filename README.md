@@ -4,7 +4,7 @@ In this project i implement a well know hack!
 Using a common 433 mhz RF Reciver, i decode a signal coming from a wireless sensor and directed to a weather station.
 I just bougth on Amazon a weather station with 3 wireless sensor like this one : 
 
-https://www.bresser.de/en/Weather-Time/Weather-Stations/BRESSER-Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data.html
+Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data
 
 Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz, to capture sensors signal.
 
