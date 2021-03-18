@@ -42,8 +42,7 @@ So if you don'thave the SAME wireless sensor, you have to write your code.
 
 3)Take a look at (https://github.com/giulio93/Regression_Tree_H-T) and see what i was able to do, once the data are collected!
 
-
-5)Raspberry Pi Project come after, with University pals :https://github.com/giulio93/humidity-monitoring-system
+4)Raspberry Pi Project come after, with University pals :https://github.com/giulio93/humidity-monitoring-system
 
 
 
