@@ -7,7 +7,6 @@ I just bougth on Amazon a weather station with 3 wireless sensor like this one :
 Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data
 
 Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz, to capture sensors signal.
-To get more info about this reciver/trasmitter visit: https://lastminuteengineers.com/433mhz-rf-wireless-arduino-tutorial/
 
 First i use Audacity to analyze and understand the wireless signal probed out by the sensors.
 Than i write some code for Arduino that let me capture and store the signal.
@@ -31,8 +30,9 @@ Serial_to_file.py       : A Python script, that write Arduino serial output into
  ## More Info...
 
 https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
+https://lastminuteengineers.com/433mhz-rf-wireless-arduino-tutorial/
 
-I followed this guide step by step, just let me point out something...
+I followed rayshobby guide step by step, just let me point out something...
 
 1) To connect my RF reciver to the sound card i use an old pair of headphones, since is tripole,i connected the "single" 
 wire to the DATA PIN of the RF Reciver and the "couple" wire to the ground.
