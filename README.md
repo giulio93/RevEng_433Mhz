@@ -7,6 +7,7 @@ I just bougth on Amazon a weather station with 3 wireless sensor like this one :
 Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data
 
 Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz, to capture sensors signal.
+To get more info about this reciver/trasmitter visit: https://lastminuteengineers.com/433mhz-rf-wireless-arduino-tutorial/
 
 First i use Audacity to analyze and understand the wireless signal probed out by the sensors.
 Than i write some code for Arduino that let me capture and store the signal.
