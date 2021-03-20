@@ -28,6 +28,9 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
                           *              0011 0010 <== Himidity
                                          
   * Serial_to_file.py       : A Python script, that write Arduino serial output into a file.
+
+* PIR_Sensor
+  * OWSOO_DECODE : The code used by Arduino to capture and print out the relevant signal in bitstring.
  ## More Info...
 
 https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
