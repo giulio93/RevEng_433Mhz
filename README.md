@@ -20,7 +20,8 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
 
   * Raw_bit_pattern.txt     : The bit string patterns printed out by the Arduino, and the respective temperature and humidity.
 
-  * Bresser_bits_to_decimal : The code used by Arduino to convert the bitstring in decimal,
+  * Bresser_bits_to_decimal : The code used by Arduino to convert the bitstring in decimal:
+                          
                           * Converting 01110000 10100000 01110110 11110011 0010SYNC 
                           * in         01110000 1010 <== Channel
                           *           0000 01110110 <== Temperature
