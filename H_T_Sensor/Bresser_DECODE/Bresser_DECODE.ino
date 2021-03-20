@@ -84,7 +84,7 @@ void handler()
       syncIndex2 = (ringIndex + 1) % RING_BUFFER_SIZE;
       unsigned int changeCount = (syncIndex2 < syncIndex1) ? (syncIndex2 + RING_BUFFER_SIZE - syncIndex1) : (syncIndex2 - syncIndex1);
       cc = changeCount;
-      // changeCount must be 74 -- 32 bits x 2 + 2 for sync
+      // changeCount must be 74 -- 36 bits x 2 + 2 for sync ==> SYNC 01110000 10100000 01110110 11110011 0010 SYNC
       if (changeCount != 74)
       {
         received = false;
