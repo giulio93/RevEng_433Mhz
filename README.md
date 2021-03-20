@@ -31,6 +31,8 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
 
 * PIR_Sensor
   * OWSOO_DECODE : The code used by Arduino to capture and print out the relevant signal in bitstring.
+  * 433Mhz_Sensor_Audacity_project_data:  Audacity files where sensor signal is captured
+  * signal.jpg: a signal image
  ## More Info...
 
 https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
