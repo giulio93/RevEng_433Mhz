@@ -129,7 +129,7 @@ void setup()
 
 void loop()
 {
-  debugBuffer(timings);
+  //debugBuffer(timings); Use this function to debug what timings has registerd the buffer
 
   if (received == true)
   {
