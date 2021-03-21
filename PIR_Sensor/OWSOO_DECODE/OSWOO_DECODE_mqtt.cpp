@@ -11,7 +11,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <mosquitto.h>
 
+ 
 #define RING_BUFFER_SIZE 256
 #define SYNC_LENGTH 13125
 #define SEP_LENGTH 450
@@ -29,8 +31,6 @@ bool isSync(unsigned int idx)
   unsigned long t1 = timings[idx];
   if (t0 > (SEP_LENGTH - 100) && t0 < (SEP_LENGTH + 100) && t1 > (SYNC_LENGTH - 1000) && t1 < (SYNC_LENGTH + 1000) && digitalRead(DATA_PIN) == HIGH)
   {
-    printf("SYNC");
-
     return true;
   }
   return false;
@@ -77,6 +77,22 @@ void handler()
   }
 }
 
+int send_message_mqtt()
+{
+    int rc;
+    struct mosquitto *mosq;
+    mosquitto_lib_init();
+
+    mosq = mosquitto_new("OSWOO", true, NULL);
+    rc = mosquitto_connect(mosq, "localhost", 1883, 60);
+
+    mosquitto_publish(mosq, NULL, "PIR", 10, "detected", 0, false);
+    mosquitto_disconnect(mosq);
+    mosquitto_destroy(mosq);
+	mosquitto_lib_cleanup();
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
   if (wiringPiSetup() == -1)
@@ -91,51 +107,14 @@ int main(int argc, char *argv[])
   {
     if (received == true)
     {
-      for (unsigned int i = syncIndex1; i != syncIndex2; i = (i + 2) % RING_BUFFER_SIZE)
-      {
-        unsigned long t0 = timings[i], t1 = timings[(i + 1) % RING_BUFFER_SIZE];
-        if (t0 > (SEP_LENGTH - 200) && t0 < (SEP_LENGTH + 200))
-        {
-          if (t1 > (BIT1_LENGTH - 1000) && t1 < (BIT1_LENGTH + 1000))
-          {
-            printf("1");
-          }
-          else if (t1 > (BIT0_LENGTH - 1000) && t1 < (BIT0_LENGTH + 1000))
-          {
-            printf("0");
-          }
-          else
-          {
-            printf("SYNC");
-          }
-        }
-        else
-        {
-          //printf("?%d?", int(t0));
-        }
-
-        if (t0 > (SEP_LENGTH - 100) && t0 < (SEP_LENGTH + 100))
-        {
-          //Bit 1 stay up around 1.3ms
-          if (t1 > (BIT1_LENGTH - 100) && t1 < (BIT1_LENGTH + 100))
-          {
-            printf("1");
-          }
-          else
-          {
-            printf("SYNC");
-          }
-        }
-        //Bit 0 stay down around 1.3ms
-        else if (t0 > (BIT0_LENGTH - 100) && t0 < (BIT0_LENGTH + 100))
-        {
-          if (t1 > (SEP_LENGTH - 100) && t1 < (SEP_LENGTH + 100))
-          {
-            printf("0");
-          }
-        }
-      }
-      printf("\n");
+      //printf("recived");
+      //system("gpio edge 2 none");
+      //wiringPiISR(1, INT_EDGE_BOTH, &handler);
+      fprintf(stdout,"recived");
+      fprintf(stdout,"\n");
+      send_message_mqtt();
+      //delay(100);
+      //wiringPiISR(DATA_PIN, INT_EDGE_BOTH, &handler);
       received = false;
       syncIndex1 = 0;
       syncIndex2 = 0;
