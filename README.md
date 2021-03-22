@@ -2,7 +2,7 @@
 
 In this project i implement a well know hack!
 Using a common 433 mhz RF Reciver, i decode a signal coming from:
-  * BRESSER Wireless sensor and directed to a weather station from Amazon: Temeo-Hygro-Quadro-thermo-and-hygrometer-with-4-independent-measuring-data
+  * BRESSER Weather thermo and hygrometer Wireless station 
   * OWSOO PIR sensor 433MHZ
 
 Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz, to capture sensors signal.
