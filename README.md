@@ -1,4 +1,4 @@
-## Backeng a 433mhz H/T sensor with an Arduino
+## RevEng_433Mhz with Arduino and Raspberry
 
 In this project i implement a well know hack!
 Using a common 433 mhz RF Reciver, i decode a signal coming from:
