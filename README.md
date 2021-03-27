@@ -14,7 +14,9 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
 
 ## What you can find inside
 * H_T_Sensor
-  * Bresser_DECODE          : The code used by Arduino to capture and print out the relevant signal in bitstring.
+  * Bresser_DECODE:
+    * The code used by Arduino to capture and print out the relevant signal in bitstring.
+    * The code used by Arduino to capture & convert the bitstring in human readable Humidity & Temperature
 
   * Analisi_sensori_H_T_    : Audacity files where sensor signal is captured
 
