@@ -24,8 +24,8 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
                           
                           * Converting 01110000 10100000 01110110 11110011 0010SYNC 
                           * in         01110000 1010 <== Channel
-                          *           0000 01110110 <== Temperature
-                          *              0011 0010 <== Himidity
+                          *            0000 01110110 <== Temperature
+                          *            0011 0010 <== Himidity
                                          
   * Serial_to_file.py       : A Python script, that write Arduino serial output into a file.
 
