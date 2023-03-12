@@ -2,7 +2,7 @@
 
 In this project i implement a well know hack!
 Using a common 433 mhz RF Reciver, i decode a signal coming from:
-  * BRESSER Weather thermo and hygrometer Wireless (433MHZ) station 
+  * BRESSER Weather thermo and hygrometer Wireless (433MHZ) station
   * OWSOO PIR sensor Wireless (433MHZ)
 
 Then i use a MXRM5V RF reciver , working between 315mhz to 433mhz, to capture sensors signal.
@@ -23,34 +23,35 @@ Finally i get my humidity and temperature sniffed and stored by the Arduino!
   * Raw_bit_pattern.txt     : The bit string patterns printed out by the Arduino, and the respective temperature and humidity.
 
   * Bresser_bits_to_decimal : The code used by Arduino to convert the bitstring in decimal:
-                          
-                          * Converting 01110000 10100000 01110110 11110011 0010SYNC 
+
+                          * Converting 01110000 10100000 01110110 11110011 0010SYNC
                           * in         01110000 1010 <== Channel
                           *            0000 01110110 <== Temperature
                           *            0011 0010 <== Himidity
-                                         
+
   * Serial_to_file.py       : A Python script, that write Arduino serial output into a file.
 
 * PIR_Sensor
   * OWSOO_DECODE:
     * The code used by Arduino to capture and print out the relevant signal in bitstring.
-    * The code used in Arduino, replicated for raspberry 
+    * The code used in Arduino, replicated for raspberry
     * The code replicated for raspeberry, plus a MQTT function that write out on a stream
   * 433Mhz_Sensor_Audacity_project_data:  Audacity files where sensor signal is captured
   * signal.jpg: a signal image
  ## More Info...
 
-https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
+- https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/
 
-https://lastminuteengineers.com/433mhz-rf-wireless-arduino-tutorial/
+- https://rayshobby.net/reverse-engineer-wireless-temperature-humidity-rain-sensors-part-1/
 
-I followed rayshobby guide step by step, just let me point out something...
+- https://lastminuteengineers.com/433mhz-rf-wireless-arduino-tutorial/
 
-1) To connect my RF reciver to the sound card i use an old pair of headphones, since is tripole,i connected the "single" 
+I followed rayshobby guide step by step, just let me point out something:
+
+1) To connect my RF reciver to the sound card i use an old pair of headphones, since is tripole,i connected the "single"
 wire to the DATA PIN of the RF Reciver and the "couple" wire to the ground.
 
-2) The code that in the web site, as the in this repository, is HARD CODED; 
-or better, based on the signal that is retrived by the wireless sensor. 
+2) The code that in the web site, as the in this repository, is HARD CODED, based on the signal that is retrived by the wireless sensor.
 So if you don'thave the SAME wireless sensor, you have to write your code.
 
 3)Take a look at (https://github.com/giulio93/Regression_Tree_H-T) and see what i was able to do, once the data are collected!
